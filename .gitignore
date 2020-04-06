@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Leap Motion Plugins
+Assets/LeapMotion/*
+!Assets/LeapMotion/README.md
