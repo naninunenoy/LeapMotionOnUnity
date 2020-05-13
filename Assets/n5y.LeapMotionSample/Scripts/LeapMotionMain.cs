@@ -1,4 +1,5 @@
 ﻿using System;
+using Leap.Unity.Encoding;
 using UnityEngine;
 using UniRx;
 
