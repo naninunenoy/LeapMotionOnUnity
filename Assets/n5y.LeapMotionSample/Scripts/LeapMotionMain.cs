@@ -1,6 +1,4 @@
-﻿using System;
-using Leap.Unity.Encoding;
-using UnityEngine;
+﻿using UnityEngine;
 using UniRx;
 
 namespace n5y.LeapMotionSample

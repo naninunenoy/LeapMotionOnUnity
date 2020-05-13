@@ -13,17 +13,18 @@ namespace n5y.LeapMotionSample
             {
                 return default;
             }
+
             var idFactory = new NodeIdFactory(NodeId.OriginNodeId);
 
             var ret = new Arms(idFactory.Create());
-            
+
             CreateAndSetArm(frame.Hands[0], idFactory, ret);
-            
+
             if (frame.Hands.Count == 1)
             {
                 return ret;
             }
-            
+
             CreateAndSetArm(frame.Hands[1], idFactory, ret);
             return ret;
         }
@@ -40,60 +41,60 @@ namespace n5y.LeapMotionSample
                 arms.Left = arm;
             }
         }
-        
+
         public static Arm LeapHand2Arm(leap.Hand hand, INodeIdFactory idFactory)
         {
             var arm = new Arm();
             NodeId Id() => idFactory.Create();
             var elbowNode = new Node(Id()) {Position = hand.Arm.ElbowPosition.V3()};
             var wristNode = new Node(Id()) {Position = hand.Arm.WristPosition.V3()};
-            var handNode = new Node(Id()) {Position = hand.PalmPosition.V3()};
-            var thumbs = new []
+            var palmNode = new Node(Id()) {Position = hand.PalmPosition.V3()};
+            var thumbs = new[]
             {
-                new Node(Id()) {Position = hand.Fingers[0].Bone(leap.Bone.BoneType.TYPE_INTERMEDIATE).NextJoint.V3()},
+                new Node(Id()) {Position = hand.Fingers[0].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[0].Bone(leap.Bone.BoneType.TYPE_INTERMEDIATE).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[0].Bone(leap.Bone.BoneType.TYPE_DISTAL).NextJoint.V3()}
             };
-            var indexes = new []
+            var indexes = new[]
             {
                 new Node(Id()) {Position = hand.Fingers[1].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).NextJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[1].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[1].Bone(leap.Bone.BoneType.TYPE_INTERMEDIATE).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[1].Bone(leap.Bone.BoneType.TYPE_DISTAL).NextJoint.V3()}
             };
-            var middles = new []
+            var middles = new[]
             {
                 new Node(Id()) {Position = hand.Fingers[2].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).NextJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[2].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[2].Bone(leap.Bone.BoneType.TYPE_INTERMEDIATE).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[2].Bone(leap.Bone.BoneType.TYPE_DISTAL).NextJoint.V3()}
             };
-            var rings = new []
+            var rings = new[]
             {
                 new Node(Id()) {Position = hand.Fingers[3].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).NextJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[3].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[3].Bone(leap.Bone.BoneType.TYPE_INTERMEDIATE).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[3].Bone(leap.Bone.BoneType.TYPE_DISTAL).NextJoint.V3()}
             };
-            var pinkies = new []
+            var pinkies = new[]
             {
                 new Node(Id()) {Position = hand.Fingers[4].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).NextJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[4].Bone(leap.Bone.BoneType.TYPE_PROXIMAL).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[4].Bone(leap.Bone.BoneType.TYPE_INTERMEDIATE).PrevJoint.V3()},
                 new Node(Id()) {Position = hand.Fingers[4].Bone(leap.Bone.BoneType.TYPE_DISTAL).NextJoint.V3()}
             };
-            
+
             elbowNode.Backward = new[] {arm};
             elbowNode.Forward = new[] {wristNode};
             wristNode.Backward = new[] {elbowNode};
-            wristNode.Forward = new[] {handNode};
-            handNode.Backward = new[] {wristNode};
-            handNode.Forward = new[] {thumbs[0], indexes[0], middles[0], rings[0], pinkies[0]};
-            SetFingerNodes(thumbs, handNode);
-            SetFingerNodes(indexes, handNode);
-            SetFingerNodes(middles, handNode);
-            SetFingerNodes(rings, handNode);
-            SetFingerNodes(pinkies, handNode);
+            wristNode.Forward = new[] {palmNode};
+            palmNode.Backward = new[] {wristNode};
+            palmNode.Forward = new[] {thumbs[0], indexes[0], middles[0], rings[0], pinkies[0]};
+            SetFingerNodes(thumbs, palmNode);
+            SetFingerNodes(indexes, palmNode);
+            SetFingerNodes(middles, palmNode);
+            SetFingerNodes(rings, palmNode);
+            SetFingerNodes(pinkies, palmNode);
 
             arm.Elbow = elbowNode;
             arm.Wrist = wristNode;
@@ -101,10 +102,10 @@ namespace n5y.LeapMotionSample
             arm.Hand = new Hand
             {
                 Rotation = hand.Rotation.Quat(),
-                Wrist = wristNode, Center = handNode,
+                Wrist = wristNode, Palm = palmNode,
                 Thumbs = thumbs, Indexes = indexes, Middles = middles, Rings = rings, Pinkies = pinkies,
             };
-            
+
             return arm;
         }
 
@@ -121,15 +122,15 @@ namespace n5y.LeapMotionSample
             }
         }
     }
-    
+
     public static class LeapExtension
     {
         public static Vector3 V3(this leap.Vector v)
         {
             return new Vector3(v.x, v.y, v.z);
         }
-        
-        
+
+
         public static Quaternion Quat(this leap.LeapQuaternion q)
         {
             return new Quaternion(q.x, q.y, q.z, q.w);
