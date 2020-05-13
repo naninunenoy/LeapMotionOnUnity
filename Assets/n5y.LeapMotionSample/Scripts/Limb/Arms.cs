@@ -2,18 +2,18 @@
 
 namespace n5y.LeapMotionSample.Limb
 {
-    public class Chest : INode
+    public class Arms : INode
     {
-        public Arm RightArm { set; get; }
-        public Arm LeftArm { set; get; }
+        public Arm Right { set; get; }
+        public Arm Left { set; get; }
 
-        public Chest(NodeId id)
+        public Arms(NodeId id)
         {
             Id = id;
         }
 
         public NodeId Id { get; }
-        public ICollection<INode> Forward => new List<INode> {LeftArm, RightArm};
+        public ICollection<INode> Forward => new List<INode> {Right, Left};
         public ICollection<INode> Backward => new List<INode>(); //Empty
     }
 }

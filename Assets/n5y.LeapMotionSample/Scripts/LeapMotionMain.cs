@@ -22,10 +22,9 @@ namespace n5y.LeapMotionSample
             leapMotionController
                 .LeapFrame
                 .SkipLatestValueOnSubscribe()
-                .Select(x => x.Item2)
+                .Select(x => Frame2Arms.Convert(x.Item2))
                 .Subscribe(x =>
                 {
-                    Debug.Log(x.Hands.Count);
                 })
                 .AddTo(this);
 

@@ -7,8 +7,8 @@ namespace n5y.LeapMotionSample.Limb
     public class Node: INode, IEquatable<Node>
     {
         public NodeId Id { get; }
-        public ICollection<INode> Forward { get; }
-        public ICollection<INode> Backward { get; }
+        public ICollection<INode> Forward { set; get; }
+        public ICollection<INode> Backward { set; get; }
         public Vector3 Position { set; get; }
 
         public Node(NodeId id)

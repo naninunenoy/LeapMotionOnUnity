@@ -11,8 +11,9 @@
 
         public NodeId Create()
         {
+            var ret = new NodeId(currentId);
             currentId++;
-            return new NodeId(currentId);
+            return ret;
         }
     }
 }
