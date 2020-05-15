@@ -1,0 +1,17 @@
+{
+    "name": "n5y.LeapMotionSample",
+    "references": [
+        "UniRx",
+        "LeapMotion.Core",
+        "VRM"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
