@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using leap = Leap;
-using n5y.LeapMotionSample.Limb;
+using n5y.HumanoidFrameDto;
 using UnityEngine;
 
-namespace n5y.LeapMotionSample
+namespace n5y.LeapMotionAdaper
 {
     public static class Frame2Arms
     {

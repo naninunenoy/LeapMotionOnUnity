@@ -1,4 +1,4 @@
-﻿namespace n5y.LeapMotionSample.Limb
+﻿namespace n5y.HumanoidFrameDto
 {
     public class NodeIdFactory : INodeIdFactory
     {

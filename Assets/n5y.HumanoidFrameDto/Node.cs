@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace n5y.LeapMotionSample.Limb
+namespace n5y.HumanoidFrameDto
 {
     public class Node: INode, IEquatable<Node>
     {

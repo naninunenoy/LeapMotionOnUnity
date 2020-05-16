@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace n5y.LeapMotionSample.Limb
+namespace n5y.HumanoidFrameDto
 {
     public interface INode
     {

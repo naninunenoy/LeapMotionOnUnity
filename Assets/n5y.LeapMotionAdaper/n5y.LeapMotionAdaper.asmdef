@@ -1,0 +1,17 @@
+{
+    "name": "n5y.LeapMotionAdaper",
+    "references": [
+        "UniRx",
+        "LeapMotion.Core",
+        "n5y.HumanoidFrameDto"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

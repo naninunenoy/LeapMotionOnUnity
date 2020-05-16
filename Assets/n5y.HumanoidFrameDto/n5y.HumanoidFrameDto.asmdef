@@ -1,10 +1,6 @@
 {
-    "name": "n5y.LeapMotionSample",
-    "references": [
-        "UniRx",
-        "LeapMotion.Core",
-        "VRM"
-    ],
+    "name": "n5y.HumanoidFrameDto",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

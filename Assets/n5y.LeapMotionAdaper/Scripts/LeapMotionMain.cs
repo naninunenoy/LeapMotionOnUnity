@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UniRx;
 
-namespace n5y.LeapMotionSample
+namespace n5y.LeapMotionAdaper
 {
     public class LeapMotionMain : MonoBehaviour
     {

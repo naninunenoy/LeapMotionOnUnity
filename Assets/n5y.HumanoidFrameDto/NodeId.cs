@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace n5y.LeapMotionSample.Limb
+namespace n5y.HumanoidFrameDto
 {
     public readonly struct NodeId : IEquatable<NodeId>
     {
