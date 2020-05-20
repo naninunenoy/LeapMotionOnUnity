@@ -1,6 +1,7 @@
 {
     "name": "n5y.HumanoidFrame.Abstruct",
     "references": [
+        "UniTask",
         "n5y.HumanoidFrame.Dto"
     ],
     "includePlatforms": [],

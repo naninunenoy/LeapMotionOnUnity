@@ -1,9 +1,11 @@
 {
     "name": "n5y.HumanoidFrame.LeapMotionImplement",
     "references": [
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:8ce7a010ba688ff42a689f5c9b7e3f7b",
         "GUID:13f41aeb5aba0b14386f4bfa5f904b1d",
-        "GUID:74a9728d8807ce8428bd3427fed16181",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+        "GUID:74a9728d8807ce8428bd3427fed16181"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
