@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using leap = Leap;
-using n5y.HumanoidFrameDto;
+using n5y.HumanoidFrame.Dto;
 using UnityEngine;
 
 namespace n5y.LeapMotionAdaper

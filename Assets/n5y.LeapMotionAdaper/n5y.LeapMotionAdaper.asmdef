@@ -3,7 +3,7 @@
     "references": [
         "UniRx",
         "LeapMotion.Core",
-        "n5y.HumanoidFrameDto"
+        "n5y.HumanoidFrame.Dto"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
