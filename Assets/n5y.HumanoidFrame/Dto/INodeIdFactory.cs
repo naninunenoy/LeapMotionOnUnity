@@ -1,4 +1,4 @@
-﻿namespace n5y.HumanoidFrameDto
+﻿namespace n5y.HumanoidFrame.Dto
 {
     public interface INodeIdFactory
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace n5y.HumanoidFrameDto
+namespace n5y.HumanoidFrame.Dto
 {
     public class Arm : INode
     {

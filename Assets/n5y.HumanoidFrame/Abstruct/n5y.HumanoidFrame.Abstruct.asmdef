@@ -1,0 +1,15 @@
+{
+    "name": "n5y.HumanoidFrame.Abstruct",
+    "references": [
+        "n5y.HumanoidFrame.Dto"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
