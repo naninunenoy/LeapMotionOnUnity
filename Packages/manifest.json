@@ -9,7 +9,7 @@
     }
   ],
   "dependencies": {
-    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=/src/UniTask/Assets/Plugins/UniTask#2.0.7-rc4",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=/src/UniTask/Assets/Plugins/UniTask#2.0.8-rc5",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
     "com.unity.ide.vscode": "1.2.0",
@@ -52,8 +52,8 @@
   },
   "lock": {
     "com.cysharp.unitask": {
-      "revision": "2.0.7-rc4",
-      "hash": "36d53a3bcb2f5b4cb62cbf738e426becfc043ff8"
+      "revision": "2.0.8-rc5",
+      "hash": "21dc83c64127d9ec074ed62ac5dbfe8abce79f3e"
     }
   }
 }
