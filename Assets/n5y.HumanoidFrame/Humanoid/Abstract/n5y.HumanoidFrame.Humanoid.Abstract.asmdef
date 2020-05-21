@@ -1,0 +1,15 @@
+{
+    "name": "n5y.HumanoidFrame.Humanoid.Abstract",
+    "references": [
+        "GUID:74a9728d8807ce8428bd3427fed16181"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,17 @@
+{
+    "name": "n5y.HumanoidFrame.Humanoid.RiggingImplement",
+    "references": [
+        "GUID:7f7d1af65c2641843945d409d28f2e20",
+        "GUID:74a9728d8807ce8428bd3427fed16181",
+        "GUID:d0a4f7d05066d0e46ad8f785eace7c18"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
