@@ -67,8 +67,4 @@ crashlytics-build.properties
 Assets/Plugins/LeapMotion/*
 !Assets/Plugins/LeapMotion/README.md
 
-# UniVRM
-Assets/VRM/*
-!Assets/VRM/README.md
-
 # ==================================

@@ -17,6 +17,7 @@
     "com.unity.textmeshpro": "2.0.1",
     "com.unity.timeline": "1.2.12",
     "com.unity.ugui": "1.0.0",
+    "com.vrmc.univrm": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM",
     "jp.cysharp.unirx": "7.1.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
@@ -54,6 +55,10 @@
     "com.cysharp.unitask": {
       "revision": "2.0.8-rc5",
       "hash": "21dc83c64127d9ec074ed62ac5dbfe8abce79f3e"
+    },
+    "com.vrmc.univrm": {
+      "revision": "HEAD",
+      "hash": "582461e7e3059c9f771f1dfaca71b93dfce167e8"
     }
   }
 }
