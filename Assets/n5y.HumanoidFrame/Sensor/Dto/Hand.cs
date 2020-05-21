@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace n5y.HumanoidFrame.Dto
+namespace n5y.HumanoidFrame.Sensor.Dto
 {
     public class Hand : INode
     {

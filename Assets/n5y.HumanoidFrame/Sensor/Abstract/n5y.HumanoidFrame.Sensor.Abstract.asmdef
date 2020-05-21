@@ -1,8 +1,8 @@
 {
-    "name": "n5y.HumanoidFrame.Abstract",
+    "name": "n5y.HumanoidFrame.Sensor.Abstract",
     "references": [
         "UniTask",
-        "n5y.HumanoidFrame.Dto"
+        "n5y.HumanoidFrame.Sensor.Dto"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

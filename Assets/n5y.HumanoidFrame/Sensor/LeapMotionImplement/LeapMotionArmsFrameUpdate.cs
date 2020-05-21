@@ -2,12 +2,12 @@
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
 using Leap;
-using UniRx;
 using Leap.Unity;
-using n5y.HumanoidFrame.Dto;
-using n5y.HumanoidFrame.Abstract;
+using n5y.HumanoidFrame.Sensor.Abstract;
+using n5y.HumanoidFrame.Sensor.Dto;
+using UniRx;
 
-namespace n5y.HumanoidFrame.LeapMotionImplement
+namespace n5y.HumanoidFrame.Sensor.LeapMotionImplement
 {
     public class LeapMotionArmsFrameUpdate : IArmsFrameUpdate
     {

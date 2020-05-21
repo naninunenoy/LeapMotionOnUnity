@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
-using leap = Leap;
-using n5y.HumanoidFrame.Dto;
+using n5y.HumanoidFrame.Sensor.Dto;
 using UnityEngine;
+using Arm = n5y.HumanoidFrame.Sensor.Dto.Arm;
+using Hand = n5y.HumanoidFrame.Sensor.Dto.Hand;
+using leap = Leap;
 
-namespace n5y.HumanoidFrame.LeapMotionImplement
+namespace n5y.HumanoidFrame.Sensor.LeapMotionImplement
 {
     public static class Frame2Arms
     {
