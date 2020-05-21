@@ -1,8 +1,8 @@
 {
     "name": "n5y.HumanoidFrame.Sensor.Abstract",
     "references": [
-        "UniTask",
-        "n5y.HumanoidFrame.Sensor.Dto"
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:74a9728d8807ce8428bd3427fed16181"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

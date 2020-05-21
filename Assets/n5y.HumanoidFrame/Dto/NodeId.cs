@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace n5y.HumanoidFrame.Sensor.Dto
+namespace n5y.HumanoidFrame.Dto
 {
     public readonly struct NodeId : IEquatable<NodeId>
     {

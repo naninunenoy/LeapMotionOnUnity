@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks.Linq;
 using Leap;
 using Leap.Unity;
 using n5y.HumanoidFrame.Sensor.Abstract;
-using n5y.HumanoidFrame.Sensor.Dto;
+using n5y.HumanoidFrame.Dto;
 using UniRx;
 
 namespace n5y.HumanoidFrame.Sensor.LeapMotionImplement

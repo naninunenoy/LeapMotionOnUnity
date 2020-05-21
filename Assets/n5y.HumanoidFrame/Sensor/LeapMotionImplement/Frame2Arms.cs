@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using n5y.HumanoidFrame.Sensor.Dto;
+using n5y.HumanoidFrame.Dto;
 using UnityEngine;
-using Arm = n5y.HumanoidFrame.Sensor.Dto.Arm;
-using Hand = n5y.HumanoidFrame.Sensor.Dto.Hand;
+using Arm = n5y.HumanoidFrame.Dto.Arm;
+using Hand = n5y.HumanoidFrame.Dto.Hand;
 using leap = Leap;
 
 namespace n5y.HumanoidFrame.Sensor.LeapMotionImplement

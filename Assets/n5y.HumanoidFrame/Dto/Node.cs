@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace n5y.HumanoidFrame.Sensor.Dto
+namespace n5y.HumanoidFrame.Dto
 {
     public class Node: INode, IEquatable<Node>
     {

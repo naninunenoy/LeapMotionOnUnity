@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using n5y.HumanoidFrame.Sensor.Dto;
+using n5y.HumanoidFrame.Dto;
 
 namespace n5y.HumanoidFrame.Sensor.Abstract
 {

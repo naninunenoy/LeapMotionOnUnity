@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace n5y.HumanoidFrame.Sensor.Dto
+namespace n5y.HumanoidFrame.Dto
 {
     public class Arms : INode
     {
