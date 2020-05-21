@@ -5,7 +5,7 @@ using Leap;
 using UniRx;
 using Leap.Unity;
 using n5y.HumanoidFrame.Dto;
-using n5y.HumanoidFrame.Abstruct;
+using n5y.HumanoidFrame.Abstract;
 
 namespace n5y.HumanoidFrame.LeapMotionImplement
 {

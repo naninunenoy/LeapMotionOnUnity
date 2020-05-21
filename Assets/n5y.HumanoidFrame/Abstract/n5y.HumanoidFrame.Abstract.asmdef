@@ -1,5 +1,5 @@
 {
-    "name": "n5y.HumanoidFrame.Abstruct",
+    "name": "n5y.HumanoidFrame.Abstract",
     "references": [
         "UniTask",
         "n5y.HumanoidFrame.Dto"

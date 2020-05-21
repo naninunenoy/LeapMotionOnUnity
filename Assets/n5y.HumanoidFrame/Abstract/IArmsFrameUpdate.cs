@@ -2,7 +2,7 @@
 using n5y.HumanoidFrame.Dto;
 
 
-namespace n5y.HumanoidFrame.Abstruct
+namespace n5y.HumanoidFrame.Abstract
 {
     public interface IArmsFrameUpdate
     {
