@@ -4,6 +4,7 @@ using Leap.Unity;
 using n5y.HumanoidFrame.Sensor.LeapMotionImplement;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.Linq;
 using n5y.HumanoidFrame.Humanoid.RiggingImplement;
 
 namespace n5y.LeapMotionAdapter
@@ -14,10 +15,14 @@ namespace n5y.LeapMotionAdapter
         [SerializeField] Animator animator = default;
         [SerializeField] Transform leftHand = default;
         [SerializeField] Transform rightHand = default;
+
         async void Start()
         {
             var leap = new LeapMotionArmsFrameUpdate(leapMotion);
             var humanoid = new RiggingHumanoidBody(animator, leftHand, rightHand);
+            await leap
+                .ArmsUpdateAsync()
+                .ForEachAsync(humanoid.ApplyArms, this.GetCancellationTokenOnDestroy());
         }
     }
 }

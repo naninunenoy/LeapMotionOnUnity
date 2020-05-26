@@ -9,19 +9,30 @@ namespace n5y.HumanoidFrame.Humanoid.RiggingImplement
         readonly Animator animator;
         readonly Transform leftHandIkTarget;
         readonly Transform rightHandIkTarget;
-        
+
         public RiggingHumanoidBody(Animator animator, Transform leftHandIkTarget, Transform rightHandIkTarget)
         {
             this.animator = animator;
             this.leftHandIkTarget = leftHandIkTarget;
             this.rightHandIkTarget = rightHandIkTarget;
         }
-        
-        
+
+
         public void ApplyArms(Arms arms)
         {
-            leftHandIkTarget.position = arms.Left.Hand.Palm.Position;
-            rightHandIkTarget.position = arms.Right.Hand.Palm.Position;
+            var left = arms?.Left?.Hand?.Palm;
+            if (left != null)
+            {
+                leftHandIkTarget.position = left.Position;
+            }
+
+            var right = arms?.Right?.Hand?.Palm;
+            if (right != null)
+            {
+                rightHandIkTarget.position = right.Position;
+            }
+
+            Debug.Log($"{left?.Position.ToString() ?? "()"} {right?.Position.ToString() ?? "()"}");
         }
     }
 }
