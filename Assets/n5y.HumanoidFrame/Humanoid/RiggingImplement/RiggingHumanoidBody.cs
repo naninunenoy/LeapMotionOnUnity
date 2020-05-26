@@ -23,16 +23,24 @@ namespace n5y.HumanoidFrame.Humanoid.RiggingImplement
             var left = arms?.Left?.Hand?.Palm;
             if (left != null)
             {
-                leftHandIkTarget.position = left.Position;
+                leftHandIkTarget.position = left.Position.ToUnityLeftHand();
             }
 
             var right = arms?.Right?.Hand?.Palm;
             if (right != null)
             {
-                rightHandIkTarget.position = right.Position;
+                rightHandIkTarget.position = right.Position.ToUnityLeftHand();
             }
 
             Debug.Log($"{left?.Position.ToString() ?? "()"} {right?.Position.ToString() ?? "()"}");
+        }
+    }
+
+    static class VectorLeftHand
+    {
+        public static Vector3 ToUnityLeftHand(this Vector3 v)
+        {
+            return new Vector3(v.x, v.y, -v.z) / 100.0F; // [mm]->[m]
         }
     }
 }
