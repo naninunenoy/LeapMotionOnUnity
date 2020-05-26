@@ -1,8 +1,11 @@
 {
-    "name": "n5y.HumanoidFrame.Humanoid.RiggingImplement",
+    "name": "n5y.LeapMotionAdapter",
     "references": [
-        "GUID:74a9728d8807ce8428bd3427fed16181",
-        "GUID:d0a4f7d05066d0e46ad8f785eace7c18"
+        "UniTask",
+        "n5y.HumanoidFrame.Dto",
+        "n5y.HumanoidFrame.Sensor.LeapMotionImplement",
+        "n5y.HumanoidFrame.Humanoid.RiggingImplement",
+        "LeapMotion.Core"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

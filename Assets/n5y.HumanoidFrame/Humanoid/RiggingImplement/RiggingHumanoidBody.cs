@@ -1,25 +1,27 @@
 ﻿using n5y.HumanoidFrame.Dto;
 using n5y.HumanoidFrame.Humanoid.Abstract;
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
 
 namespace n5y.HumanoidFrame.Humanoid.RiggingImplement
 {
     public class RiggingHumanoidBody : IHumanoidBody
     {
         readonly Animator animator;
-        readonly RigBuilder rigBuilder;
+        readonly Transform leftHandIkTarget;
+        readonly Transform rightHandIkTarget;
         
-        public RiggingHumanoidBody(Animator animator, RigBuilder rigBuilder)
+        public RiggingHumanoidBody(Animator animator, Transform leftHandIkTarget, Transform rightHandIkTarget)
         {
             this.animator = animator;
-            this.rigBuilder = rigBuilder;
+            this.leftHandIkTarget = leftHandIkTarget;
+            this.rightHandIkTarget = rightHandIkTarget;
         }
         
         
         public void ApplyArms(Arms arms)
         {
-            
+            leftHandIkTarget.position = arms.Left.Hand.Palm.Position;
+            rightHandIkTarget.position = arms.Right.Hand.Palm.Position;
         }
     }
 }
