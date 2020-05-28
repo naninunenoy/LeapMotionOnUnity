@@ -9,7 +9,7 @@
     }
   ],
   "dependencies": {
-    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=/src/UniTask/Assets/Plugins/UniTask#2.0.8-rc5",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=/src/UniTask/Assets/Plugins/UniTask#2.0.11-rc8",
     "com.unity.animation.rigging": "0.2.6-preview",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
@@ -54,8 +54,8 @@
   },
   "lock": {
     "com.cysharp.unitask": {
-      "revision": "2.0.8-rc5",
-      "hash": "21dc83c64127d9ec074ed62ac5dbfe8abce79f3e"
+      "revision": "2.0.11-rc8",
+      "hash": "35b933730b208885cd9c3ad61edc473f8d3474a8"
     },
     "com.vrmc.univrm": {
       "revision": "HEAD",
