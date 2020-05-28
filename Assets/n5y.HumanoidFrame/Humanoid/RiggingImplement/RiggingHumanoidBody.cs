@@ -6,13 +6,13 @@ namespace n5y.HumanoidFrame.Humanoid.RiggingImplement
 {
     public class RiggingHumanoidBody : IHumanoidBody
     {
-        readonly Animator animator;
+        readonly Vector3 leapMotionBase;
         readonly Transform leftHandIkTarget;
         readonly Transform rightHandIkTarget;
 
-        public RiggingHumanoidBody(Animator animator, Transform leftHandIkTarget, Transform rightHandIkTarget)
+        public RiggingHumanoidBody(Vector3 leapMotionBase, Transform leftHandIkTarget, Transform rightHandIkTarget)
         {
-            this.animator = animator;
+            this.leapMotionBase = leapMotionBase;
             this.leftHandIkTarget = leftHandIkTarget;
             this.rightHandIkTarget = rightHandIkTarget;
         }
@@ -20,19 +20,19 @@ namespace n5y.HumanoidFrame.Humanoid.RiggingImplement
 
         public void ApplyArms(Arms arms)
         {
-            var left = arms?.Left?.Hand?.Palm;
-            if (left != null)
+            var hand = arms?.Left?.Hand;
+            if (hand != null)
             {
-                leftHandIkTarget.position = left.Position.ToUnityLeftHand();
+                leftHandIkTarget.position = hand.Palm.Position.ToUnityLeftHand() + leapMotionBase;
+                leftHandIkTarget.rotation = hand.Rotation.ToUnityLeftHand();
             }
 
-            var right = arms?.Right?.Hand?.Palm;
-            if (right != null)
+            hand = arms?.Right?.Hand;
+            if (hand != null)
             {
-                rightHandIkTarget.position = right.Position.ToUnityLeftHand();
+                rightHandIkTarget.position = hand.Palm.Position.ToUnityLeftHand() + leapMotionBase;
+                rightHandIkTarget.rotation = hand.Rotation.ToUnityLeftHand();
             }
-
-            Debug.Log($"{left?.Position.ToString() ?? "()"} {right?.Position.ToString() ?? "()"}");
         }
     }
 
@@ -41,6 +41,10 @@ namespace n5y.HumanoidFrame.Humanoid.RiggingImplement
         public static Vector3 ToUnityLeftHand(this Vector3 v)
         {
             return new Vector3(v.x, v.y, -v.z) / 100.0F; // [mm]->[m]
+        }
+        public static Quaternion ToUnityLeftHand(this Quaternion q)
+        {
+            return new Quaternion(-q.x, q.y, -q.z, q.w);
         }
     }
 }

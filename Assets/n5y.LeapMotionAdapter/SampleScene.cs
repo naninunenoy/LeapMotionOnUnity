@@ -19,7 +19,7 @@ namespace n5y.LeapMotionAdapter
         async void Start()
         {
             var leap = new LeapMotionArmsFrameUpdate(leapMotion);
-            var humanoid = new RiggingHumanoidBody(animator, leftHand, rightHand);
+            var humanoid = new RiggingHumanoidBody(leapMotion.transform.position, leftHand, rightHand);
             await leap
                 .ArmsUpdateAsync()
                 .ForEachAsync(humanoid.ApplyArms, this.GetCancellationTokenOnDestroy());
